@@ -121,6 +121,7 @@ resource "oci_containerengine_node_pool" "workers" {
       name, defined_tags, freeform_tags,
       node_metadata["user_data"],               # templated cloud-init
       node_config_details[0].placement_configs, # dynamic placement configs
+      node_config_details[0].size,
       # node_source_details[0],                   # dynamic image lookup
     ]
 
